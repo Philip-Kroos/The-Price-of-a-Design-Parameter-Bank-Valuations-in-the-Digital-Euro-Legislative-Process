@@ -1,0 +1,23 @@
+date,event_id,timing,basis
+2023-06-28,E01,before_close,Commission adopts proposals at the weekly College meeting and presents them at a midday press conference
+2023-10-19,E02,before_close,Announcement in the plenary sitting during the day
+2023-10-31,E03,unknown,ECB legal opinion published on the website; release time not documented
+2024-02-09,E04,unknown,Committee document published on the EP website; excluded from the no-look-ahead specification
+2024-02-20,E05,unknown,Committee opinion document; publication time not documented
+2024-02-21,E06,unknown,Amendments document; excluded from the no-look-ahead specification
+2024-11-13,E07,before_close,Plenary announcement during the day
+2024-12-16,E08,before_close,Committee decision during a committee meeting
+2025-07-03,E09,before_close,Committee decision during a committee meeting
+2025-07-15,E10,unknown,Committee opinion document; publication time not documented
+2025-09-02,E26,unknown,Yearbook chapter; publication time not documented
+2025-09-19,E19,unknown,Eurogroup meeting with statements and press conference in the afternoon
+2025-10-23,E23,after_close,European Council conclusions adopted at the end of the summit day
+2025-10-30,E11,unknown,ECB release after the Governing Council meeting; time not documented
+2025-11-03,E12,unknown,Draft report document dated 3 November; presented in committee on 5 November
+2025-12-19,E22,unknown,Council press release on the second day of a European Council summit; time not documented
+2026-03-05,E20,unknown,ECB news release; time not documented
+2026-06-23,E14,before_close,Committee vote held during the committee meeting
+2026-06-26,E15,unknown,Report tabled; document publication
+2026-07-06,E16,before_close,Announcement in the plenary sitting
+2026-07-09,E17,before_close,Plenary voting time around midday
+2026-07-14,E24,unknown,ECB press release; time not documented

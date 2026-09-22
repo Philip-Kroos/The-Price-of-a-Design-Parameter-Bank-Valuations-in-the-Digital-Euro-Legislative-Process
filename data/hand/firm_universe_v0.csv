@@ -1,0 +1,52 @@
+group,name,country,ticker_guess,rationale,status
+bank,Deutsche Bank,DE,DBK.DE,large deposit base; 12 documented meetings on the file,ticker TO VERIFY
+bank,Commerzbank,DE,CBK.DE,retail deposit funded,ticker TO VERIFY
+bank,BNP Paribas,FR,BNP.PA,5 documented meetings,ticker TO VERIFY
+bank,Societe Generale,FR,GLE.PA,documented meetings,ticker TO VERIFY
+bank,Credit Agricole,FR,ACA.PA,documented meetings,ticker TO VERIFY
+bank,Banco Santander,ES,SAN.MC,7 documented meetings,ticker TO VERIFY
+bank,BBVA,ES,BBVA.MC,documented meetings,ticker TO VERIFY
+bank,CaixaBank,ES,CABK.MC,documented meetings; high retail deposit share,ticker TO VERIFY
+bank,Banco Sabadell,ES,SAB.MC,retail deposit funded,ticker TO VERIFY
+bank,Bankinter,ES,BKT.MC,retail deposit funded,ticker TO VERIFY
+bank,Unicaja,ES,UNI.MC,retail deposit funded,ticker TO VERIFY
+bank,Intesa Sanpaolo,IT,ISP.MI,documented meetings,ticker TO VERIFY
+bank,UniCredit,IT,UCG.MI,documented meetings,ticker TO VERIFY
+bank,Banco BPM,IT,BAMI.MI,retail deposit funded,ticker TO VERIFY
+bank,BPER Banca,IT,BPE.MI,retail deposit funded,ticker TO VERIFY
+bank,Mediobanca,IT,MB.MI,lower retail deposit share; useful low-exposure bank,ticker TO VERIFY
+bank,ING Groep,NL,INGA.AS,documented meetings; very high deposit share,ticker TO VERIFY
+bank,ABN AMRO,NL,ABN.AS,high retail deposit share,ticker TO VERIFY
+bank,KBC Group,BE,KBC.BR,retail deposit funded,ticker TO VERIFY
+bank,Erste Group,AT,EBS.VI,documented meeting,ticker TO VERIFY
+bank,Raiffeisen Bank International,AT,RBI.VI,retail deposit funded,ticker TO VERIFY
+bank,BAWAG Group,AT,BG.VI,retail deposit funded,ticker TO VERIFY
+bank,Bank of Ireland,IE,BIRG.IR,retail deposit funded,ticker TO VERIFY
+bank,AIB Group,IE,A5G.IR,retail deposit funded,ticker TO VERIFY
+bank,National Bank of Greece,GR,ETE.AT,retail deposit funded,ticker TO VERIFY
+bank,Eurobank,GR,EUROB.AT,retail deposit funded,ticker TO VERIFY
+bank,Alpha Services,GR,ALPHA.AT,retail deposit funded,ticker TO VERIFY
+bank,Piraeus Financial,GR,TPEIR.AT,retail deposit funded,ticker TO VERIFY
+bank,Banco Comercial Portugues,PT,BCP.LS,retail deposit funded,ticker TO VERIFY
+bank,Bank of Cyprus,CY,BOCH.CY,retail deposit funded,ticker TO VERIFY
+payments,Mastercard,US,MA,card network; documented meetings,ticker TO VERIFY
+payments,Visa,US,V,card network; documented meeting,ticker TO VERIFY
+payments,American Express,US,AXP,card network; documented meeting,ticker TO VERIFY
+payments,PayPal,US,PYPL,digital wallet incumbent,ticker TO VERIFY
+payments,Nexi,IT,NEXI.MI,euro area acquirer and processor; documented meeting,ticker TO VERIFY
+payments,Worldline,FR,WLN.PA,euro area acquirer and processor,ticker TO VERIFY
+payments,Adyen,NL,ADYEN.AS,euro area acquirer,ticker TO VERIFY
+payments,Wise,UK,WISE.L,cross-border payments; documented meeting,ticker TO VERIFY
+payments,Fiserv,US,FI,merchant acquiring,ticker TO VERIFY
+payments,Global Payments,US,GPN,merchant acquiring,ticker TO VERIFY
+device,Apple,US,AAPL,device gatekeeper directly targeted by the NFC access provisions; documented meetings,ticker TO VERIFY
+device,Alphabet,US,GOOGL,device and wallet operator,ticker TO VERIFY
+bigtech,Amazon,US,AMZN,8 documented meetings; e-commerce acceptance side,ticker TO VERIFY
+bigtech,Meta,US,META,documented meeting,ticker TO VERIFY
+control_bank,Swedbank,SE,SWED-A.ST,non-euro bank with similar deposit structure,ticker TO VERIFY
+control_bank,Svenska Handelsbanken,SE,SHB-A.ST,non-euro control,ticker TO VERIFY
+control_bank,Danske Bank,DK,DANSKE.CO,non-euro control,ticker TO VERIFY
+control_bank,DNB Bank,NO,DNB.OL,non-euro control,ticker TO VERIFY
+control_bank,Lloyds Banking Group,UK,LLOY.L,non-euro control with high retail deposit share,ticker TO VERIFY
+control_bank,NatWest Group,UK,NWG.L,non-euro control,ticker TO VERIFY
+control_bank,UBS Group,CH,UBSG.SW,non-euro control; documented meeting,ticker TO VERIFY

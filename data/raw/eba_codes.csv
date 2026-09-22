@@ -1,0 +1,63 @@
+sheet,0,1,2,3
+Financial_instruments,,Financial_instruments,Label,
+Financial_instruments,,0,Total / No breakdown,
+Financial_instruments,,12,Derivatives,
+Financial_instruments,,21,Short positions - Equity instruments,
+Financial_instruments,,22,Short positions - Debt securities,
+Financial_instruments,,30,Deposits,
+Financial_instruments,,31,Deposits - of which: Current accounts / overnight deposits,
+Financial_instruments,,40,Debt securities issued,
+Financial_instruments,,41,Debt securities issued Of which: Subordinated Debt securities issued,
+Financial_instruments,,50,Other financial liabilities,
+Exposure,,,Exposure,Label
+Exposure,,,0,Total / No breakdown
+Exposure,,,101,Central banks
+Exposure,,,102,General governments
+Exposure,,,103,Central governments or central banks
+Exposure,,,104,Regional governments or local authorities
+Exposure,,,105,Public sector entities
+Exposure,,,106,Multilateral Development Banks
+Exposure,,,107,International Organisations
+Exposure,,,201,Credit institutions
+Exposure,,,202,Financial corporations other than credit institutions
+Exposure,,,203,Institutions
+Exposure,,,204,Institutions without a short-term credit assessment
+Exposure,,,301,Non-financial corporations
+Exposure,,,311,Non-financial corporations - Small and Medium-sized Enterprises
+Exposure,,,312,Non-financial corporations  - Collateralised by commercial immovable property
+Exposure,,,302,Corporates - SME
+Exposure,,,308,Corporates - Real estate. Commercial
+Exposure,,,303,Corporates
+Exposure,,,304,Corporates - Specialised Lending
+Exposure,,,305,Corporates other than specialised lending
+Exposure,,,306,Corporates without a short-term credit assessment
+Exposure,,,307,Institutions and corporates with a short-term credit assessment
+Exposure,,,401,Households
+Exposure,,,431,Households of which: Collateralised by residential immovable property
+Exposure,,,432,Households  of which: Credit for consumption
+Exposure,,,402,Real estate. Residential
+Exposure,,,403,Credit for consumption
+Exposure,,,404,Retail
+Exposure,,,405,Retail - SME
+Exposure,,,406,Retail – Secured by real estate property
+Exposure,,,407,Retail – Secured by real estate property - SME
+Exposure,,,408,Retail – Secured by real estate property - NON SME
+Exposure,,,409,Retail – Qualifying Revolving
+Exposure,,,410,Retail – Other Retail
+Exposure,,,411,Retail – Other Retail - SME
+Exposure,,,412,Retail – Other Retail - NON SME
+Exposure,,,501,Secured by mortgages on immovable property
+Exposure,,,502,Secured by mortgages on immovable property - SME
+Exposure,,,601,Exposures in default
+Exposure,,,602,Items associated with particularly high risk
+Exposure,,,603,Covered bonds
+Exposure,,,604,Claims on institutions and corporate with a short-term credit assessment
+Exposure,,,605,Claims in the form of CIU
+Exposure,,,606,Equity exposures
+Exposure,,,607,Other items
+Exposure,,,608,Securitisation
+Exposure,,,700,Secured
+Exposure,,,710,Secured - Of which secured with immovable property
+Exposure,,,711,Secured - Of which instruments with LTV higher than 60% and lower or equal to 80%
+Exposure,,,712,Secured - Of which instruments with LTV higher than 80% and lower or equal to 100%
+Exposure,,,713,Secured - Of which instruments with LTV  higher than 100%

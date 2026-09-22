@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper."
+title: "The Price of a Design Parameter: Bank Valuations in the Digital Euro Legislative Process"
+type: software
+authors:
+  - family-names: Kroos
+    given-names: Philip
+date-released: 2026-09-21
+keywords:
+  - digital euro
+  - CBDC
+  - banking
+  - financial stability
+  - event study
+  - political economy

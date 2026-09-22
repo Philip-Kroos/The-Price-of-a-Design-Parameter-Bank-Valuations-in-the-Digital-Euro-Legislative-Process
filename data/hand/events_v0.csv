@@ -1,0 +1,18 @@
+event_id,date,stage,description,design_content,source_url,verification
+E01,2023-06-28,commission,European Commission tables the digital euro regulation COM(2023)0369,project_launch,https://eur-lex.europa.eu,TO VERIFY at EUR-Lex
+E02,2023-10-19,parliament,ECON committee referral announced in Parliament (first reading),procedural,https://oeil.secure.europarl.europa.eu,TO VERIFY
+E03,2023-10-31,ecb,ECB formal opinion CON/2023/0034,ecb_support,https://www.ecb.europa.eu,TO VERIFY
+E04,2024-02-09,parliament,ECON committee draft report PE758.954,parliament_position_first,https://oeil.secure.europarl.europa.eu,TO VERIFY
+E05,2024-02-20,parliament,LIBE committee opinion PE754.988 (privacy),privacy,https://oeil.secure.europarl.europa.eu,TO VERIFY
+E06,2024-12-16,parliament,Navarrete Rojas (EPP) appointed rapporteur replacing Berger,rapporteur_change,https://oeil.secure.europarl.europa.eu,TO VERIFY
+E07,2025-07-08,council,ECOFIN expresses backing for swift progress,political_backing,https://www.consilium.europa.eu,TO VERIFY
+E08,2025-07-15,parliament,LIBE committee opinion PE775.581,privacy,https://oeil.secure.europarl.europa.eu,TO VERIFY
+E09,2025-09-19,eurogroup,Eurogroup agrees governance framework and process for setting the holding limit,holding_limit_process,https://www.ecb.europa.eu/euro/digital_euro/progress/html/ecb.deprp202510.en.html,PARTIAL via ECB closing report
+E10,2025-10-30,ecb,ECB closing report of the preparation phase; next phase begins,project_advance,https://www.ecb.europa.eu/euro/digital_euro/progress/html/ecb.deprp202510.en.html,VERIFIED
+E11,2025-11-03,parliament,ECON committee draft report PE778.136,parliament_position,https://oeil.secure.europarl.europa.eu,TO VERIFY
+E12,2025-12-19,parliament,Four sets of amendments tabled in ECON,amendments,https://oeil.secure.europarl.europa.eu,TO VERIFY
+E13,2026-03-05,ecb,ECB call for expression of interest for pilot PSPs,pilot_launch,https://www.ecb.europa.eu,TO VERIFY
+E14,2026-06-23,parliament,ECON adopts position 43-14-1 with holding caps and 24h cap on business holdings,holding_limit_cap,https://oeil.secure.europarl.europa.eu,TO VERIFY (secondary)
+E15,2026-07-09,parliament,Plenary grants negotiating mandate 416-169-22,mandate,https://www.europarl.europa.eu,TO VERIFY (secondary)
+E16,2026-07-13,trilogue,First trilogue between Parliament and Council,negotiation_start,https://www.consilium.europa.eu,TO VERIFY (secondary)
+E17,2026-07-15,ecb,ECB selects 36 payment service providers for the pilot,pilot_selection,https://www.bundesbank.de,TO VERIFY; exact date unknown

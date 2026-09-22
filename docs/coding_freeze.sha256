@@ -1,0 +1,7 @@
+06cc052fc56419c581a70ebed9d5d7df9153ff01a7b084386c374b3a6a6659ad  data/hand/event_coding_v1.csv
+7d407a36d225d1db523f5b18fdd75d2fc03c512baf4dce6e8f7db1ba2d39d15c  data/hand/firm_universe_v0.csv
+frozen at 2026-09-21T15:38:47Z, BEFORE any return was computed from prices_daily.csv
+cb9d788baf5526ad2118c8db7283fdc0ebe87dfdfc6f6134c2f4ad1ec57bf93c  docs/pap_v1.md
+pap v1.13 frozen before continuous estimation
+42323ed8ffa3e823847866a72557f805635f4ca856bbc239fd6bfb561ad9b820  data/hand/events_early_2020_2021.csv
+early-event coding frozen 2026-09-21T16:47:26Z BEFORE any return was computed from prices_2019_2021.csv

@@ -1,0 +1,7 @@
+event_id,date,type,procedural,dir_banks,dir_psp,dir_bigtech,surprise,source,content
+P01,2020-10-02,implementation,0,-1,-1,0,high,ECB Report on a digital euro (Wikipedia; ECB timeline),Eurosystem publishes its report on a digital euro setting out scenarios for issuance; first official signal of a possible project
+P02,2020-10-12,implementation,1,0,0,0,low,ECB press release 13.01.2021,Public consultation launched following the report; no new design content
+P03,2021-01-13,implementation,1,0,0,0,low,ECB press release 13.01.2021,Consultation closes with record participation; preliminary results rank privacy highest; no design decision
+P04,2021-02-10,design,0,1,0,0,high,Burlon et al. (2022) ECB WP 2689,Executive Board member states before the European Parliament that a holding limit of around EUR 3000 per person is under consideration; first quantitative signal of a cap
+P05,2021-04-14,implementation,1,0,0,0,low,ECB press release 14.04.2021,Full consultation results published; privacy 43 percent top concern; no design decision
+P06,2021-07-14,implementation,0,-1,-1,0,medium,ECB press release 14.07.2021,Governing Council launches the 24-month investigation phase of the digital euro project

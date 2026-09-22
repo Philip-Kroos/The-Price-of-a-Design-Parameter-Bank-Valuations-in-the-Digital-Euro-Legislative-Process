@@ -1,0 +1,22 @@
+event_id,date,stage,description,reference,design_content,source,verification
+E01,2023-06-28,commission,Legislative proposal published,COM(2023)0369,project_launch,OEIL 2023/0212(COD),VERIFIED
+E02,2023-10-19,parliament,Committee referral announced in Parliament and referral to associated committees,,procedural,OEIL,VERIFIED
+E03,2023-10-31,ecb,ECB opinion,CON/2023/0034,ecb_opinion,OEIL,VERIFIED
+E04,2024-02-09,parliament,ECON committee draft report (Berger),PE758.954,parliament_position_first,OEIL,VERIFIED
+E05,2024-02-20,parliament,LIBE committee opinion (privacy),PE754.988,privacy,OEIL,VERIFIED
+E06,2024-02-21,parliament,Amendments tabled in ECON (two sets),PE759.657 PE759.666,amendments,OEIL,VERIFIED
+E07,2024-11-13,parliament,Resumption of business from the previous parliamentary term,,procedural,OEIL,VERIFIED
+E08,2024-12-16,parliament,Navarrete Rojas (EPP) appointed rapporteur; Berger (EPP appointed 19/07/2023) replaced,,rapporteur_change,OEIL,VERIFIED
+E09,2025-07-03,parliament,Radev (EPP) appointed LIBE rapporteur for opinion,,procedural,OEIL,VERIFIED
+E10,2025-07-15,parliament,LIBE committee opinion,PE775.581,privacy,OEIL,VERIFIED
+E11,2025-10-30,ecb,ECB closing report of the preparation phase; move to next phase,,project_advance,ECB closing report,VERIFIED
+E12,2025-11-03,parliament,ECON committee draft report (Navarrete Rojas),PE778.136,parliament_position,OEIL,VERIFIED
+E13,2025-12-19,parliament,Amendments tabled in ECON (four sets),PE781.235 PE781.499 PE781.500 PE781.501,amendments,OEIL,VERIFIED
+E14,2026-06-23,parliament,Vote in committee 1st reading and decision to open interinstitutional negotiations,,committee_position_adopted,OEIL,VERIFIED
+E15,2026-06-26,parliament,Committee report tabled for plenary,A10-0185/2026,report_tabled,OEIL,VERIFIED
+E16,2026-07-06,parliament,Committee decision to enter negotiations announced in plenary (Rule 72),,procedural,OEIL,VERIFIED
+E17,2026-07-09,parliament,Results of vote in Parliament; negotiating mandate confirmed,PV-10-2026-07-09-VOT,mandate_confirmed,OEIL,VERIFIED
+E18,2025-07-08,council,ECOFIN backing for swift progress,,political_backing,secondary,TO VERIFY at Council
+E19,2025-09-19,eurogroup,Eurogroup agrees governance and process for setting the holding limit,,holding_limit_process,secondary,TO VERIFY at Eurogroup
+E20,2026-03-05,ecb,ECB call for expression of interest for pilot PSPs,,pilot_launch,secondary,TO VERIFY at ECB
+E21,2026-07-13,trilogue,First trilogue (rapporteur met Irish Presidency on this date per EP transparency register),,negotiation_start,OEIL transparency register,PARTIAL

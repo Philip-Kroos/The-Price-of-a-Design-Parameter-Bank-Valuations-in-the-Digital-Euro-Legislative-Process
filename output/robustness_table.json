@@ -1,0 +1,38 @@
+{
+ "Baseline (one day, 250-day window, three factors)": {
+  "theta": 0.051380707389468344,
+  "t": 0.9184596261613391
+ },
+ "Three-day window": {
+  "theta": -0.005686968737387806,
+  "t": -0.08000163783593725
+ },
+ "Estimation window 120 days": {
+  "theta": 0.061450170293059526,
+  "t": 1.1083456026311416
+ },
+ "Estimation window 500 days": {
+  "theta": 0.05005117165934476,
+  "t": 0.9238907367159007
+ },
+ "Excluding March 2023 banking turmoil from estimation": {
+  "theta": 0.051380707389468344,
+  "t": 0.9184596261613391
+ },
+ "Market model (STOXX Europe 600)": {
+  "theta": 0.055054520123174897,
+  "t": 0.9698123716816174
+ },
+ "F3: limiting events only (direction +1)": {
+  "theta": 0.005011000337232417,
+  "t": 0.046627565908170805
+ },
+ "F3: expanding events only (direction -1)": {
+  "theta": 0.09615088326356275,
+  "t": 0.9229276711508184
+ },
+ "Pre-event estimation window per event [-260,-11]": {
+  "theta": 0.09853774792093718,
+  "t": 1.8329474194426891
+ }
+}
