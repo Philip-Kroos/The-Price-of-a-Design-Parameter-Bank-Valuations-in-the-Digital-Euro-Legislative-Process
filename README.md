@@ -36,7 +36,7 @@ This paper combines those events with bank-level deposit exposure and equity-mar
 
 The figure below puts the central result in one picture. The left side shows the early 2020–2021 phase; the right side shows the 2023–2026 legislative phase. Points are exposure slopes signed so that a positive value agrees with the model prediction.
 
-![Early project news versus later legislative design](assets/fig_event_slopes_all.jpg)
+![Early project news versus later legislative design](assets/key_results.svg)
 
 *Early project-existence news produced a much larger cross-sectional response than the later legislative design events. Red squares mark design-parameter events; black circles mark implementation/project events.*
 
@@ -69,7 +69,7 @@ Event fixed effects absorb news common to all firms on a date. The coefficient i
 
 The market response is modest, but the design parameters were not politically irrelevant. I transcribe the published transparency record for the digital-euro procedure: **309 disclosed meetings** between legislators and interest representatives.
 
-![Negotiation record for the digital euro](assets/fig_lobby.jpg)
+![Negotiation record for the digital euro](assets/negotiation_meetings.svg)
 
 *Panel A shows who met the negotiators over time. Panel B shows the number of disclosed meetings in the 30 days before key events.*
 
