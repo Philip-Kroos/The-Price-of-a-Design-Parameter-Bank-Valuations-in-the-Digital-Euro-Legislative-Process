@@ -32,15 +32,15 @@ This paper combines those events with bank-level deposit exposure and equity-mar
 
 ---
 
-## Early project news vs. later design news
+## Main estimates in one figure
 
-The figure below puts the central result in one picture. The left side shows the early 2020–2021 phase; the right side shows the 2023–2026 legislative phase. Points are exposure slopes signed so that a positive value agrees with the model prediction.
+The figure below compares the paper's central bank-valuation estimates on a common scale. Positive values agree with the model-predicted direction.
 
-![Early project news versus later legislative design](assets/key_results.svg)
+![Key bank valuation estimates](assets/key_results.svg)
 
-*Early project-existence news produced a much larger cross-sectional response than the later legislative design events. Red squares mark design-parameter events; black circles mark implementation/project events.*
+*Point estimates with approximate 95% confidence intervals. The green point is the 2020 positive control; blue points are later legislative estimates; the red square is the design-parameter-only estimate.*
 
-The October 2020 Eurosystem report generates a response close to the magnitude documented in the earlier literature. By contrast, later parameter-setting events are smaller, mixed in sign, and jointly indistinguishable from zero.
+The October 2020 Eurosystem report generates a response close to the magnitude documented in the earlier literature. The pre-specified 2023–2026 estimate is much smaller; conservative release-time alignment raises it somewhat, while the events that actually set or signal design parameters remain centered almost exactly at zero.
 
 ---
 
@@ -69,9 +69,9 @@ Event fixed effects absorb news common to all firms on a date. The coefficient i
 
 The market response is modest, but the design parameters were not politically irrelevant. I transcribe the published transparency record for the digital-euro procedure: **309 disclosed meetings** between legislators and interest representatives.
 
-![Negotiation record for the digital euro](assets/negotiation_meetings.svg)
+![Who met the digital-euro negotiators?](assets/negotiation_meetings.svg)
 
-*Panel A shows who met the negotiators over time. Panel B shows the number of disclosed meetings in the 30 days before key events.*
+*Breakdown of the 309 disclosed meetings in the legislative transparency record. Banks and banking associations are the largest private-interest category.*
 
 Banks and banking associations account for the largest private-interest category. Payment providers, retailers, consumer organisations and large technology firms also appear repeatedly. I use this record **descriptively**, not as an instrument or source of exogenous variation: lobbying intensity is itself endogenous to expected exposure.
 
