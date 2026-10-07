@@ -42,6 +42,7 @@ for dd in evd:
     for f, v in s.items():
         if np.isfinite(v): rows.append(dict(event_date=dd, firm=f, car=float(v)))
 cts = build(pd.DataFrame(rows))
+cts.to_csv("output/car_stoxxexcess_ts.csv", index=False)
 out["stoxx_excess"] = dict(one_day=main(c1), aligned=main(cts), design=design(c1))
 print("STOXX excess-return market model:", out["stoxx_excess"])
 # (1) provider sensitivity: binary spec with the Council provider direction set to 0

@@ -1,9 +1,9 @@
 import sys; sys.path.insert(0, ".")
 import numpy as np, pandas as pd, json
 from src.eventstudy import second_stage
-from src.ecb_rate import load_dfr_daily
 out = {}
 # euro risk-free: daily ECB deposit facility rate
+from src.ecb_rate import load_dfr_daily
 dfr = load_dfr_daily()
 # ---- (3) 2020 positive control with strictly pre-event betas -------------------------------------------
 p = pd.read_csv("data/raw/prices_2019_2021.csv", parse_dates=["date"])

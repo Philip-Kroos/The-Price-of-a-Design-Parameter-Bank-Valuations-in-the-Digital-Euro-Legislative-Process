@@ -1,6 +1,6 @@
 import sys; sys.path.insert(0, ".")
 import numpy as np, pandas as pd, json
-from src.eventstudy import second_stage, second_stage_beta
+from src.eventstudy import second_stage
 ex = pd.read_csv("data/derived/bank_exposure_2023q1.csv")
 eu = ex[ex.group == "bank"]
 Z = {}
@@ -27,7 +27,7 @@ for win in sys.argv[1:] or ["w01"]:
             mp = dict(zip(banks, rng.permutation(zb)))
             s = q.copy(); zz = s.firm.map(mp)
             s["x_bank"] = np.where(s.grp == "bank", zz * s.direction, 0.0)
-            null.append(second_stage_beta(s, ["x_bank", "d_bank", "d_pay", "d_gate"])[0])
+            null.append(second_stage(s, ["x_bank", "d_bank", "d_pay", "d_gate"])["beta"][0])
         null = np.array(null)
         p_perm = (1 + (np.abs(null) >= abs(r["beta"][0])).sum()) / 500
         key = f"{win}_{m}"
