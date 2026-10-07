@@ -1,5 +1,9 @@
-numpy>=1.26
-pandas>=2.0
+# Python 3.11; versions used for the reported results
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+matplotlib==3.10.9
 pytest>=8.0
-requests>=2.31
-yfinance>=0.2.40
+# only needed to re-download prices (src/colab_download*.py, src/download_prices*.py):
+# yfinance>=0.2.40
+# requests>=2.31

@@ -1,0 +1,12 @@
+# LaTeX build files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+# local by-products
+output/fig_timeline_regenerated.png

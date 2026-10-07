@@ -2,7 +2,7 @@
 
 ## Bank Valuations in the Digital Euro Legislative Process
 
-**Philip Kroos — September 2026**
+**Philip Kroos · October 2026**
 
 [**Read the paper (PDF)**](paper/main.pdf) · [**One-page abstract**](paper/abstract.pdf) · [**Replication guide**](REPLICATION.md)
 
@@ -22,7 +22,7 @@ This paper combines those events with bank-level deposit exposure and equity-mar
 
 | Question | Evidence |
 |---|---|
-| Do more deposit-funded banks react more to bank-friendly digital-euro news? | **Only weakly.** The pre-specified estimate is **+0.051 pp per 1 SD of deposit exposure**; permutation *p* = **0.47**. |
+| Do more deposit-funded banks react more to bank-friendly digital-euro news? | **Only weakly.** The pre-specified estimate is **+0.051 pp per 1 SD of deposit exposure**; permutation *p* = **0.45**. |
 | Does publication timing matter? | A conservative release-time alignment raises the estimate to roughly **+0.15 to +0.17 pp**. This is evidence of a small effect, but it is inference-sensitive and still economically modest. |
 | What happens on events that actually set or signal a design parameter? | **No detectable valuation effect.** The design-only estimate is **−0.004 pp**, with a 95% interval of about **[−0.22, +0.21]**. |
 | Can the design detect a large effect when one exists? | **Yes.** On the October 2020 Eurosystem-report day, strictly pre-event specifications produce a slope of about **+0.77 to +0.82 pp per SD**. |
@@ -124,7 +124,7 @@ Post-specification analyses are reported alongside, rather than in place of, the
 
 ~~~text
 .
-├── paper/          paper and one-page abstract
+├── paper/          paper, one-page abstract, LaTeX source and figures
 ├── data/
 │   ├── hand/       event coding, timing, firm universe, lobbying record
 │   ├── raw/        archived source inputs
@@ -133,7 +133,7 @@ Post-specification analyses are reported alongside, rather than in place of, the
 ├── output/         stored estimation outputs
 ├── docs/           pre-specification, hashes and deviations
 ├── tests/          unit tests
-├── run_all.py      core replication entry point
+├── run_all.py      reproduces every table and figure
 └── REPLICATION.md  detailed reproduction guide
 ~~~
 
@@ -148,10 +148,9 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python run_all.py
-python -m pytest -q
 ~~~
 
-See [**REPLICATION.md**](REPLICATION.md) for the exact script map and the additional raw ECB rate input required to rerun one post-review euro-excess-return robustness exercise.
+`run_all.py` checks the hashes of the frozen inputs, rebuilds the derived data, every estimate and Figures 1–4 with fixed seeds, and runs the unit tests. A full run takes about one hour. All inputs are included. See [**REPLICATION.md**](REPLICATION.md) for the script behind each table and figure.
 
 ---
 
