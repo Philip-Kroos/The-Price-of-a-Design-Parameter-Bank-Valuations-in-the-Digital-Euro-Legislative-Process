@@ -49,6 +49,7 @@ STEPS = [
     ["src/run_early_2019.py"],                     # 2020-21 events with December 2019 exposure
     ["src/run_round10.py"],                        # positive control with pre-event betas
     ["src/run_inference_final.py"],                # all permutation and wild-bootstrap p-values, 9,999 draws
+    ["src/run_redate_draft.py"],                   # draft report dated by first press report; documented release times
     ["src/make_fig_timeline.py", "output/fig_timeline_regenerated.png"],   # Figure 1 (see REPLICATION.md)
     ["src/make_figures.py"],                       # Figures 2-4
 ]

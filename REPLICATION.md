@@ -45,6 +45,7 @@ and their outputs are in `data/raw` (see `data/raw/README.md`).
 | Design-only power | `src/run_round4.py` | `output/round4.json` |
 | Section 9.7 and Figure 4 (2020–21) | `src/run_early.py`, `src/run_early_2019.py`, `src/run_round10.py` | `output/early_results*.json`, `round10_early.json` |
 | **All permutation and wild bootstrap p-values** | `src/run_inference_final.py`, `src/run_ts_final.py` | `output/inference_final.json`, `ts_final.json` |
+| Corrected dating: draft report on 31 October 2025, documented release times (cited throughout; mainly Sections 5.6 and 9.8, Tables 7 and 10) | `src/run_redate_draft.py` (timing in `data/hand/event_timing_v2.csv`) | `output/redate_draft.json` |
 | Figure 1 | `src/make_fig_timeline.py` | see note below |
 | Figures 2–4 | `src/make_figures.py` | `paper/figures/fig_lobby.png`, `fig_results_bank.png`, `fig_event_slopes_all.png` |
 
@@ -52,7 +53,7 @@ Shared code: `src/eventstudy.py` (abnormal returns, CARs, second stage with leav
 `src/firststage.py` (first-stage models), `src/ecb_rate.py` (deposit facility rate).
 
 **p-values.** Every permutation and wild cluster bootstrap p-value in the paper uses 9,999 draws and comes
-from `output/inference_final.json` or `output/ts_final.json`. Some earlier scripts also print p-values with
+from `output/inference_final.json`, `output/ts_final.json` or `output/redate_draft.json`. Some earlier scripts also print p-values with
 499 or 999 draws as a by-product; those differ in the second decimal and are not the ones reported. The
 placebo-date test uses 500 sets of dates and the Romano–Wolf adjustment 300 joint draws, as stated in the paper.
 

@@ -23,7 +23,7 @@ This paper combines those events with bank-level deposit exposure and equity-mar
 | Question | Evidence |
 |---|---|
 | Do more deposit-funded banks react more to bank-friendly digital-euro news? | **Only weakly.** The pre-specified estimate is **+0.051 pp per 1 SD of deposit exposure**; permutation *p* = **0.45**. |
-| Does publication timing matter? | A conservative release-time alignment raises the estimate to roughly **+0.15 to +0.17 pp**. This is evidence of a small effect, but it is inference-sensitive and still economically modest. |
+| Does publication timing matter? | **Not for the conclusion.** The content of the rapporteur's draft report was first reported after the close on 30 October 2025. Dated by that report, the estimate is **−0.013 pp**; aligned to documented release times it is **+0.03 to +0.05 pp** (permutation *p* ≥ 0.61). An earlier alignment that treated this report as undocumented gave +0.15 to +0.17 pp. |
 | What happens on events that actually set or signal a design parameter? | **No detectable valuation effect.** The design-only estimate is **−0.004 pp**, with a 95% interval of about **[−0.22, +0.21]**. |
 | Can the design detect a large effect when one exists? | **Yes.** On the October 2020 Eurosystem-report day, strictly pre-event specifications produce a slope of about **+0.77 to +0.82 pp per SD**. |
 | Were the design choices politically important? | **Yes.** The legislative transparency record contains **309 disclosed meetings** with banks, payment firms, retailers, technology firms and other stakeholders. |
@@ -40,7 +40,7 @@ The figure below compares the paper's central bank-valuation estimates on a comm
 
 *Point estimates with approximate 95% confidence intervals. The green point is the 2020 positive control; blue points are later legislative estimates; the red square is the design-parameter-only estimate.*
 
-The October 2020 Eurosystem report generates a response close to the magnitude documented in the earlier literature. The pre-specified 2023–2026 estimate is much smaller; conservative release-time alignment raises it somewhat, while the events that actually set or signal design parameters remain centered almost exactly at zero.
+The October 2020 Eurosystem report generates a response close to the magnitude documented in the earlier literature. The pre-specified 2023–2026 estimate is much smaller; aligning events to their documented release times leaves it close to zero, while the events that actually set or signal design parameters remain centered almost exactly at zero.
 
 ---
 
@@ -58,7 +58,7 @@ The identifying comparison is therefore **within the same event day**: does a ba
 - **Outcome:** event-day abnormal equity returns.
 - **Fixed effects:** firm and event fixed effects.
 - **Inference:** leave-one-firm-out jackknife standard errors, exposure-permutation inference and null-imposed wild-cluster bootstrap checks.
-- **Timing:** one-day baseline, wider windows and a conservative release-time-aligned specification.
+- **Timing:** one-day baseline, wider windows, the draft report dated by its first press report, and a specification aligned to documented release times.
 - **Positive control:** the same design is extended back to 2020–2021 using predetermined 2019 exposure and strictly pre-event factor loadings.
 
 Event fixed effects absorb news common to all firms on a date. The coefficient is identified from whether firms with different exposure react differently **to the same event**.
@@ -82,7 +82,7 @@ Banks and banking associations account for the largest private-interest category
 The paper does **not** claim that digital-euro design has literally zero value. The evidence supports a narrower conclusion:
 
 - the pre-specified estimate is small and imprecise;
-- the release-time specification allows a somewhat larger, but still modest, response;
+- correcting the timing of events moves the estimate towards zero, not away from it;
 - the cleanest design-parameter subset shows no detectable effect;
 - effects of the size observed around the major 2020 project announcement are inconsistent with the later legislative evidence.
 
