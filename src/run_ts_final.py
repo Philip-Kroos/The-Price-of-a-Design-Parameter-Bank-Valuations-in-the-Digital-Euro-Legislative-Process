@@ -72,18 +72,19 @@ def inference(q, seed):
                 p_perm=float(pp), p_wild=float(pw), n=int(len(q)), draws=B)
 
 
-out = {}
-for name, path, seed in [("ff3usd", "output/car_ff3usd_ts.csv", 101),
-                         ("eur_mkt_ff", "output/car_local3_ts.csv", 102),
-                         ("eur_excess", "output/car_stoxxexcess_ts.csv", 103)]:
-    q = prep(path)
-    o = inference(q, seed)
-    qc = q[~q.event_date.isin(CONFOUNDED)].copy(); qc["x_bank"] = np.where(qc.grp == "bank", qc.z * qc.direction, 0.0)
-    rc = second_stage(qc, ["x_bank"] + CTRL)
-    o["excl_confounded"] = dict(theta=float(rc["beta"][0] * 100), t=float(rc["t"][0]))
-    o["design_only"] = design_only(q)
-    out[name] = o
-    print(name, json.dumps({k: (round(v, 4) if isinstance(v, float) else v) for k, v in o.items() if not isinstance(v, dict)}),
-          "| excl. confounded", round(o["excl_confounded"]["theta"], 3), round(o["excl_confounded"]["t"], 2),
-          "| design only", round(o["design_only"]["theta"], 3), round(o["design_only"]["se"], 3), round(o["design_only"]["t"], 2))
-json.dump(out, open("output/ts_final.json", "w"), indent=1)
+if __name__ == "__main__":
+    out = {}
+    for name, path, seed in [("ff3usd", "output/car_ff3usd_ts.csv", 101),
+                             ("eur_mkt_ff", "output/car_local3_ts.csv", 102),
+                             ("eur_excess", "output/car_stoxxexcess_ts.csv", 103)]:
+        q = prep(path)
+        o = inference(q, seed)
+        qc = q[~q.event_date.isin(CONFOUNDED)].copy(); qc["x_bank"] = np.where(qc.grp == "bank", qc.z * qc.direction, 0.0)
+        rc = second_stage(qc, ["x_bank"] + CTRL)
+        o["excl_confounded"] = dict(theta=float(rc["beta"][0] * 100), t=float(rc["t"][0]))
+        o["design_only"] = design_only(q)
+        out[name] = o
+        print(name, json.dumps({k: (round(v, 4) if isinstance(v, float) else v) for k, v in o.items() if not isinstance(v, dict)}),
+              "| excl. confounded", round(o["excl_confounded"]["theta"], 3), round(o["excl_confounded"]["t"], 2),
+              "| design only", round(o["design_only"]["theta"], 3), round(o["design_only"]["se"], 3), round(o["design_only"]["t"], 2))
+    json.dump(out, open("output/ts_final.json", "w"), indent=1)

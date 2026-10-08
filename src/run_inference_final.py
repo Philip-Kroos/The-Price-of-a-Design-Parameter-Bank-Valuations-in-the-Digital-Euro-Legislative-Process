@@ -100,24 +100,25 @@ def run(q, Z, xfun, test, seed, blocks=False, wild=False):
     return out
 
 
-Z23 = zmap("data/derived/bank_exposure_2023q1.csv", "dep_share")
-ZON = zmap("data/derived/bank_exposure_2023q1.csv", "overnight_share")
-Z19 = zmap("data/derived/bank_exposure_2019q4.csv", "dep_share_2019")
-w00, w01 = panel("output/car_panel_w00.csv"), panel("output/car_panel_w01.csv")
-nla = w00[~w00.event_date.isin(LOOKAHEAD)].reset_index(drop=True)
-early = panel("output/car_panel_early.csv")
+if __name__ == "__main__":
+    Z23 = zmap("data/derived/bank_exposure_2023q1.csv", "dep_share")
+    ZON = zmap("data/derived/bank_exposure_2023q1.csv", "overnight_share")
+    Z19 = zmap("data/derived/bank_exposure_2019q4.csv", "dep_share_2019")
+    w00, w01 = panel("output/car_panel_w00.csv"), panel("output/car_panel_w01.csv")
+    nla = w00[~w00.event_date.isin(LOOKAHEAD)].reset_index(drop=True)
+    early = panel("output/car_panel_early.csv")
 
-R = {}
-R["main_one_day"] = run(w00, Z23, x_main, "x_bank", 1, wild=True)
-R["overnight_one_day"] = run(w00, ZON, x_main, "x_bank", 2)
-R["main_two_day"] = run(w01, Z23, x_main, "x_bank", 3)
-R["overnight_two_day"] = run(w01, ZON, x_main, "x_bank", 4)
-R["country_blocked_one_day"] = run(w00, Z23, x_main, "x_bank", 5, blocks=True)
-R["no_lookahead"] = run(nla, Z23, x_main, "x_bank", 6)
-R["design_only"] = run(nla, Z23, x_design, "x_design", 7)
-R["f1_procedural"] = run(w00, Z23, x_f1, "x_proc", 8)
-R["early_2019_exposure"] = run(early, Z19, x_main, "x_bank", 9)
-for k, v in R.items():
-    print(f"{k:24s} theta {v['theta']:7.3f}  se {v['se']:6.3f}  t {v['t']:6.2f}  p_perm {v['p_perm']:.3f}"
-          + (f"  p_wild {v['p_wild']:.3f}" if "p_wild" in v else "") + f"  n {v['n']}  events {v['events']}")
-json.dump(R, open("output/inference_final.json", "w"), indent=1)
+    R = {}
+    R["main_one_day"] = run(w00, Z23, x_main, "x_bank", 1, wild=True)
+    R["overnight_one_day"] = run(w00, ZON, x_main, "x_bank", 2)
+    R["main_two_day"] = run(w01, Z23, x_main, "x_bank", 3)
+    R["overnight_two_day"] = run(w01, ZON, x_main, "x_bank", 4)
+    R["country_blocked_one_day"] = run(w00, Z23, x_main, "x_bank", 5, blocks=True)
+    R["no_lookahead"] = run(nla, Z23, x_main, "x_bank", 6)
+    R["design_only"] = run(nla, Z23, x_design, "x_design", 7)
+    R["f1_procedural"] = run(w00, Z23, x_f1, "x_proc", 8)
+    R["early_2019_exposure"] = run(early, Z19, x_main, "x_bank", 9)
+    for k, v in R.items():
+        print(f"{k:24s} theta {v['theta']:7.3f}  se {v['se']:6.3f}  t {v['t']:6.2f}  p_perm {v['p_perm']:.3f}"
+              + (f"  p_wild {v['p_wild']:.3f}" if "p_wild" in v else "") + f"  n {v['n']}  events {v['events']}")
+    json.dump(R, open("output/inference_final.json", "w"), indent=1)
