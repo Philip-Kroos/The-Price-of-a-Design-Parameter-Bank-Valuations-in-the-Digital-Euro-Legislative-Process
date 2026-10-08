@@ -37,10 +37,10 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fi
 <text x="750" y="256" class="small">+0.051</text>
 
 <text x="38" y="345" class="label">Release-time aligned</text>
-<text x="38" y="368" class="small">conservative timing specification</text>
-<line x1="696.3" y1="350" x2="789.6" y2="350" class="ci"/>
-<circle cx="742.9" cy="350" r="9" class="dot"/>
-<text x="797" y="356" class="small">+0.161</text>
+<text x="38" y="368" class="small">documented release times</text>
+<line x1="664.4" y1="350" x2="757.8" y2="350" class="ci"/>
+<circle cx="711.1" cy="350" r="9" class="dot"/>
+<text x="765" y="356" class="small">+0.043</text>
 
 <text x="38" y="445" class="label">Design-parameter events only</text>
 <text x="38" y="468" class="small">four bank-relevant design events</text>
