@@ -13,7 +13,8 @@ Mirrors Table 11 of the paper. The dated record of each decision is in the adden
 | Within-group test: selected vs non-selected pilot providers | Not implemented | Usable firm-level list of selected providers not available | Before estimation |
 | Coding of the February 2024 draft and amendments as zero | Additionally excluded in a no-look-ahead specification | Original coding relied partly on the later fate of the draft | After review |
 | Pooled design and implementation events | Additionally separated | Title question concerns design events | After review |
-| One-day window with documented event days | Additionally release-time aligned | Publication time undocumented for 13 events | After review |
+| One-day window with documented event days | Additionally release-time aligned | Publication time undocumented for 11 events (13 in an earlier version) | After review |
+| Draft report dated by its document, 3 November 2025 | Additionally dated by its first press report, 31 October 2025; ECB release of 30 October 2025 timed during trading | Content reported after the close on 30 October (Bloomberg, 21:12 UTC); ECB release carried by news services by midday | After review, after the earlier result was known |
 | Exposure measured in 2023 for all events | December 2019 exposure for the 2020–21 events | 2023 measure not predetermined for early events | After review, before estimation |
 | Pre-specified first stage mixes local-currency returns with dollar factors | Additionally, a euro market factor with FF size and value, and a euro market model in excess returns | Fama–French European factors are computed in US dollars | After review |
 | Two-day windows summed over available days | Windows require a return on every day | Coding error; two-day results recomputed | After review |
