@@ -113,54 +113,56 @@ def bank_slope(A, d):
     return float(np.polyfit(z[ok], r[ok], 1)[0] * 100)
 
 
-# ---- the original dating reproduces the stored estimates (same code path, point estimates) ----
-evd, dirmap, design, lookahead, tim = setup(False)
-stored = json.load(open("output/inference_final.json")); stored_ts = json.load(open("output/ts_final.json"))
-stored_rob = json.load(open("output/robustness_table.json"))
-A0 = first_stage(evd, "ff3usd")
-assert abs(point(build(A0, evd, dirmap, tim, "w00"))["theta"] - stored["main_one_day"]["theta"]) < 1e-9
-assert abs(point(build(A0, evd, dirmap, tim, "w01"))["theta"] - stored["main_two_day"]["theta"]) < 1e-9
-assert abs(point(finish(per_event_ar(evd), dirmap))["theta"] - stored_rob["Pre-event estimation window per event [-260,-11]"]["theta"]) < 1e-9
-for name, version in [("ff3usd", "ff3usd"), ("eur_mkt_ff", "local3"), ("eur_excess", "eur_excess")]:
-    assert abs(point(build(first_stage(evd, version), evd, dirmap, tim, "aligned"))["theta"] - stored_ts[name]["theta"]) < 1e-9, name
-print("original dating reproduces the stored estimates")
+if __name__ == "__main__":
+    # ---- the original dating reproduces the stored estimates (same code path, point estimates) ----
+    evd, dirmap, design, lookahead, tim = setup(False)
+    stored = json.load(open("output/inference_final.json")); stored_ts = json.load(open("output/ts_final.json"))
+    stored_rob = json.load(open("output/robustness_table.json"))
+    A0 = first_stage(evd, "ff3usd")
+    assert abs(point(build(A0, evd, dirmap, tim, "w00"))["theta"] - stored["main_one_day"]["theta"]) < 1e-9
+    assert abs(point(build(A0, evd, dirmap, tim, "w01"))["theta"] - stored["main_two_day"]["theta"]) < 1e-9
+    assert abs(point(finish(per_event_ar(evd), dirmap))["theta"] - stored_rob["Pre-event estimation window per event [-260,-11]"]["theta"]) < 1e-9
+    for name, version in [("ff3usd", "ff3usd"), ("eur_mkt_ff", "local3"), ("eur_excess", "eur_excess")]:
+        assert abs(point(build(first_stage(evd, version), evd, dirmap, tim, "aligned"))["theta"] - stored_ts[name]["theta"]) < 1e-9, name
+    print("original dating reproduces the stored estimates")
 
-# ---- corrected dating ----
-evd, dirmap, design, lookahead, tim = setup(True)
-A = first_stage(evd, "ff3usd")
-q1 = build(A, evd, dirmap, tim, "w00")
-OUT = {"one_day": run(q1, Z23, x_main, "x_bank", 201, wild=True)}
-qd, xd = design_spec(q1, design, lookahead)
-OUT["one_day_design_only"] = run(qd, Z23, xd, "x_design", 202)
-OUT["two_day"] = run(build(A, evd, dirmap, tim, "w01"), Z23, x_main, "x_bank", 203)
-OUT["per_event_window"] = point(finish(per_event_ar(evd), dirmap))
-for v in ["local3", "eur_excess"]:
-    OUT[f"one_day_{v}"] = point(build(first_stage(evd, v), evd, dirmap, tim, "w00"))
-OUT["slope_31oct2025"] = bank_slope(A, NEW)
-OUT["slope_3nov2025"] = bank_slope(A, OLD)
-OUT["aligned"] = {}
-for k, (name, version) in enumerate([("ff3usd", "ff3usd"), ("eur_mkt_ff", "local3"), ("eur_excess", "eur_excess")]):
-    q = build(first_stage(evd, version), evd, dirmap, tim, "aligned")
-    o = inference(q, 301 + k)
-    qc = q[~q.event_date.isin(CONFOUNDED)]
-    o["excl_confounded"] = {kk: point(qc)[kk] for kk in ("theta", "t")}
-    qd, xd = design_spec(q, design, lookahead)
-    o["design_only"] = run(qd, Z23, xd, "x_design", 311 + k)
-    OUT["aligned"][name] = o
-# decomposition: documented timing of the ECB release alone, draft report at its document date
-evd0, dir0, _, _, tim0 = setup(False); tim0 = dict(tim0); tim0[pd.Timestamp("2025-10-30")] = "before_close"
-OUT["aligned_ecb_timing_only"] = {kk: point(build(first_stage(evd0, "ff3usd"), evd0, dir0, tim0, "aligned"))[kk] for kk in ("theta", "t")}
-OUT["notes"] = "E12 dated 2025-10-31; release-time-aligned windows from data/hand/event_timing_v2.csv"
+    # ---- corrected dating ----
+    evd, dirmap, design, lookahead, tim = setup(True)
+    A = first_stage(evd, "ff3usd")
+    q1 = build(A, evd, dirmap, tim, "w00")
+    OUT = {"one_day": run(q1, Z23, x_main, "x_bank", 201, wild=True)}
+    qd, xd = design_spec(q1, design, lookahead)
+    OUT["one_day_design_only"] = run(qd, Z23, xd, "x_design", 202)
+    OUT["two_day"] = run(build(A, evd, dirmap, tim, "w01"), Z23, x_main, "x_bank", 203)
+    OUT["per_event_window"] = point(finish(per_event_ar(evd), dirmap))
+    for v in ["local3", "eur_excess"]:
+        OUT[f"one_day_{v}"] = point(build(first_stage(evd, v), evd, dirmap, tim, "w00"))
+    OUT["slope_31oct2025"] = bank_slope(A, NEW)
+    OUT["slope_3nov2025"] = bank_slope(A, OLD)
+    OUT["aligned"] = {}
+    for k, (name, version) in enumerate([("ff3usd", "ff3usd"), ("eur_mkt_ff", "local3"), ("eur_excess", "eur_excess")]):
+        q = build(first_stage(evd, version), evd, dirmap, tim, "aligned")
+        o = inference(q, 301 + k)
+        qc = q[~q.event_date.isin(CONFOUNDED)]
+        o["excl_confounded"] = {kk: point(qc)[kk] for kk in ("theta", "t")}
+        qd, xd = design_spec(q, design, lookahead)
+        o["design_only"] = run(qd, Z23, xd, "x_design", 311 + k)
+        OUT["aligned"][name] = o
+    # decomposition: documented timing of the ECB release alone, draft report at its document date
+    evd0, dir0, _, _, tim0 = setup(False); tim0 = dict(tim0); tim0[pd.Timestamp("2025-10-30")] = "before_close"
+    OUT["aligned_ecb_timing_only"] = {kk: point(build(first_stage(evd0, "ff3usd"), evd0, dir0, tim0, "aligned"))[kk] for kk in ("theta", "t")}
+    q1.to_csv("output/car_panel_w00_redated.csv", index=False)
+    OUT["notes"] = "E12 dated 2025-10-31; release-time-aligned windows from data/hand/event_timing_v2.csv"
 
-f = lambda d: f"{d['theta']:.3f} (se {d['se']:.3f}, t {d['t']:.2f}" + (f", p_perm {d['p_perm']:.3f}" if "p_perm" in d else "") + (f", p_wild {d['p_wild']:.3f}" if "p_wild" in d else "") + ")"
-print("one day             ", f(OUT["one_day"]))
-print("one day, design only", f(OUT["one_day_design_only"]))
-print("two days            ", f(OUT["two_day"]))
-print("per-event betas     ", f(OUT["per_event_window"]))
-print("one day, euro market + FF", f(OUT["one_day_local3"]), "| euro excess", f(OUT["one_day_eur_excess"]))
-print("aligned, ECB timing only", OUT["aligned_ecb_timing_only"])
-print(f"bank slope 31 Oct {OUT['slope_31oct2025']:.3f}, 3 Nov {OUT['slope_3nov2025']:.3f}")
-for name, a in OUT["aligned"].items():
-    print(f"aligned {name:10s}", f(a), f"ci {a['ci'][0]:.2f} to {a['ci'][1]:.2f} | excl. confounded {a['excl_confounded']['theta']:.3f} "
-          f"(t {a['excl_confounded']['t']:.2f}) | design only", f(a["design_only"]))
-json.dump(OUT, open("output/redate_draft.json", "w"), indent=1)
+    f = lambda d: f"{d['theta']:.3f} (se {d['se']:.3f}, t {d['t']:.2f}" + (f", p_perm {d['p_perm']:.3f}" if "p_perm" in d else "") + (f", p_wild {d['p_wild']:.3f}" if "p_wild" in d else "") + ")"
+    print("one day             ", f(OUT["one_day"]))
+    print("one day, design only", f(OUT["one_day_design_only"]))
+    print("two days            ", f(OUT["two_day"]))
+    print("per-event betas     ", f(OUT["per_event_window"]))
+    print("one day, euro market + FF", f(OUT["one_day_local3"]), "| euro excess", f(OUT["one_day_eur_excess"]))
+    print("aligned, ECB timing only", OUT["aligned_ecb_timing_only"])
+    print(f"bank slope 31 Oct {OUT['slope_31oct2025']:.3f}, 3 Nov {OUT['slope_3nov2025']:.3f}")
+    for name, a in OUT["aligned"].items():
+        print(f"aligned {name:10s}", f(a), f"ci {a['ci'][0]:.2f} to {a['ci'][1]:.2f} | excl. confounded {a['excl_confounded']['theta']:.3f} "
+              f"(t {a['excl_confounded']['t']:.2f}) | design only", f(a["design_only"]))
+    json.dump(OUT, open("output/redate_draft.json", "w"), indent=1)

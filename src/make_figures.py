@@ -3,7 +3,7 @@
 Figure 2  paper/figures/fig_lobby.png             negotiation record: meetings by quarter and category; meetings before each event
 Figure 3  paper/figures/fig_results_bank.png      event-day gap euro minus non-euro banks; placebo-date distribution
 Figure 4  paper/figures/fig_event_slopes_all.png  event-level exposure slopes, 2020 to 2026
-Run from the repository root after src/run_main.py, src/run_placebo_dates.py and src/run_early.py:
+Run from the repository root after src/run_main.py, src/run_placebo_dates.py, src/run_early.py and src/run_redate_draft.py:
     python src/make_figures.py [output_dir]
 """
 import sys
@@ -106,9 +106,11 @@ early_ev = pd.read_csv("data/hand/events_early_2020_2021.csv", parse_dates=["dat
 pe = pd.read_csv("output/car_panel_early.csv", parse_dates=["event_date"])
 s1 = slopes(pe, zmap("data/derived/bank_exposure_2019q4.csv", "dep_share_2019"),
             set(early_ev.loc[early_ev.type == "design", "event_id"]), dict(zip(early_ev.date, early_ev.event_id)))
-p0 = pd.read_csv("output/car_panel_w00.csv", parse_dates=["event_date"]); p0["grp"] = p0.group
-s2 = slopes(p0, zmap("data/derived/bank_exposure_2023q1.csv", "dep_share"),
-            {"E12", "E14", "E17", "E22", "E26", "E19"}, dict(zip(est.date, est.event_id)))
+# legislative events in the preferred dating: draft report (E12) on 31 October 2025, the first trading day
+# after its content was reported (panel written by src/run_redate_draft.py)
+p0 = pd.read_csv("output/car_panel_w00_redated.csv", parse_dates=["event_date"])
+ids = dict(zip(est.date, est.event_id)); ids.pop(pd.Timestamp("2025-11-03"), None); ids[pd.Timestamp("2025-10-31")] = "E12"
+s2 = slopes(p0, zmap("data/derived/bank_exposure_2023q1.csv", "dep_share"), {"E12", "E14", "E17", "E22", "E26", "E19"}, ids)
 S = pd.concat([s1, s2], ignore_index=True)
 fig, ax = plt.subplots(figsize=(6.5, 2.9))
 fig.subplots_adjust(left=0.10, right=0.99, top=0.95, bottom=0.22)
@@ -122,7 +124,7 @@ ax.axvline(len(s1) - 0.5, color=GREY, lw=0.8, ls=":")
 ax.text((len(s1) - 1) / 2, 2.0, "2020–21", ha="center", fontsize=7.5, color="#555")
 ax.text(len(s1) + (len(s2) - 1) / 2, 2.0, "2023–26, legislative phase", ha="center", fontsize=7.5, color="#555")
 ax.set_ylim(-2.2, 2.3); ax.set_yticks(np.arange(-2, 2.01, 0.5))
-ax.set_xticks(xx); ax.set_xticklabels(S.date.dt.strftime("%b %y"), rotation=50, ha="right", rotation_mode="anchor")
+ax.set_xticks(xx); ax.set_xticklabels(S.date.dt.strftime("%d.%m.%y"), rotation=50, ha="right", rotation_mode="anchor")
 ax.set_ylabel("Signed slope, pp per SD")
 ax.legend(frameon=False, loc="lower right")
 fig.savefig(f"{OUT}/fig_event_slopes_all.png", dpi=300, facecolor="white")
