@@ -30,11 +30,11 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fi
 <circle cx="906.1" cy="150" r="9" class="early"/>
 <text x="1099" y="156" class="small">+0.77</text>
 
-<text x="38" y="245" class="label">2023–26 pre-specified</text>
-<text x="38" y="268" class="small">main one-day estimate</text>
-<line x1="683.6" y1="250" x2="742.7" y2="250" class="ci"/>
-<circle cx="713.4" cy="250" r="9" class="dot"/>
-<text x="750" y="256" class="small">+0.051</text>
+<text x="38" y="245" class="label">2023–26 preferred estimate</text>
+<text x="38" y="268" class="small">event-day shocks allowed for</text>
+<line x1="622.8" y1="250" x2="769.6" y2="250" class="ci"/>
+<circle cx="696.2" cy="250" r="9" class="dot"/>
+<text x="777" y="256" class="small">−0.013</text>
 
 <text x="38" y="345" class="label">Release-time aligned</text>
 <text x="38" y="368" class="small">documented release times</text>
