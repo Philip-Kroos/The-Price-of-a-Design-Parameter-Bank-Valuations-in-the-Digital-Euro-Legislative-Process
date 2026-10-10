@@ -22,10 +22,10 @@ This paper combines those events with bank-level deposit exposure and equity-mar
 
 | Question | Evidence |
 |---|---|
-| Do more deposit-funded banks react more to bank-friendly digital-euro news? | **Only weakly.** The pre-specified estimate is **+0.051 pp per 1 SD of deposit exposure**; permutation *p* = **0.45**. |
+| Do more deposit-funded banks react more to bank-friendly digital-euro news? | **No.** With every event dated by the day its content became public, the estimate is **−0.013 pp per 1 SD of deposit exposure** (placebo-date *p* = **0.91**). The pre-specified dating gives +0.051 pp (*p* = 0.45). Allowing for shocks common to all banks on an event day, effects above about 0.26 to 0.33 pp are excluded. |
 | Does publication timing matter? | **Not for the conclusion.** The content of the rapporteur's draft report was first reported after the close on 30 October 2025. Dated by that report, the estimate is **−0.013 pp**; aligned to documented release times it is **+0.03 to +0.05 pp** (permutation *p* ≥ 0.61). An earlier alignment that treated this report as undocumented gave +0.15 to +0.17 pp. |
 | What happens on events that actually set or signal a design parameter? | **No detectable valuation effect.** The design-only estimate is **−0.004 pp**, with a 95% interval of about **[−0.22, +0.21]**. |
-| Can the design detect a large effect when one exists? | **Yes.** On the October 2020 Eurosystem-report day, strictly pre-event specifications produce a slope of about **+0.77 to +0.82 pp per SD**. |
+| Can the design detect a large effect when one exists? | **Yes, with a caveat.** On the October 2020 Eurosystem-report day, strictly pre-event specifications produce a slope of about **+0.77 to +0.82 pp per SD**. It is a single day, larger in absolute value than 94% of the slopes on ordinary trading days. |
 | Were the design choices politically important? | **Yes.** The legislative transparency record contains **309 disclosed meetings** with banks, payment firms, retailers, technology firms and other stakeholders. |
 
 > **Main takeaway:** markets appear to have reacted much more strongly to early news about whether a digital euro would exist than to the later legislative details of how it would be designed.
@@ -38,9 +38,9 @@ The figure below compares the paper's central bank-valuation estimates on a comm
 
 ![Key bank valuation estimates](assets/key_results.svg)
 
-*Point estimates with approximate 95% confidence intervals. The green point is the 2020 positive control; blue points are later legislative estimates; the red square is the design-parameter-only estimate.*
+*Point estimates with approximate 95% confidence intervals; the interval of the preferred estimate allows for shocks common to all banks on an event day. The green point is the 2020 positive control; blue points are later legislative estimates; the red square is the design-parameter-only estimate.*
 
-The October 2020 Eurosystem report generates a response close to the magnitude documented in the earlier literature. The pre-specified 2023–2026 estimate is much smaller; aligning events to their documented release times leaves it close to zero, while the events that actually set or signal design parameters remain centered almost exactly at zero.
+The October 2020 Eurosystem report generates a response close to the magnitude documented in the earlier literature. The preferred 2023–2026 estimate is much smaller; aligning events to their documented release times leaves it close to zero, while the events that actually set or signal design parameters remain centered almost exactly at zero.
 
 ---
 
@@ -81,7 +81,7 @@ Banks and banking associations account for the largest private-interest category
 
 The paper does **not** claim that digital-euro design has literally zero value. The evidence supports a narrower conclusion:
 
-- the pre-specified estimate is small and imprecise;
+- the preferred estimate is close to zero and the pre-specified estimate small; allowing for shocks common to an event day, effects above a quarter to a third of the 2020 magnitude are excluded;
 - correcting the timing of events moves the estimate towards zero, not away from it;
 - the cleanest design-parameter subset shows no detectable effect;
 - effects of the size observed around the major 2020 project announcement are inconsistent with the later legislative evidence.
